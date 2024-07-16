@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+</head>
+
+<body>
+   <button onclick="greet('Lalit')">Greet!</button>
+   <button onclick="
+   let ans = convertToFahrenheit(25);
+   console.log(ans);
+   
+   ">Convert To Fahrenheit</button>
+   <button onclick="
+   let ans = convertToCelsius(86);
+   console.log(ans);
+   
+   ">Convert To Celsius</button>
+   <button onclick="
+
+   let result = convertTemperature(25,'C');
+   console.log(result);
+   
+   ">Convert Temperature</button>
+
+   <script>
+      function greet(name = undefined) {
+
+         if (name === undefined) {
+            console.log('hi there!');
+         } else {
+            console.log(`Hello ${name}`);
+         }
+      }
+
+      function convertToFahrenheit(celsius) {
+         return (celsius * 9 / 5) + 32;
+      }
+
+      function convertToCelsius(fahrenheit) {
+         return Math.floor((fahrenheit - 32) * 5 / 9);
+      }
+
+      function convertTemperature(temperature,inDegree) {
+
+         if(inDegree ==='C'){
+            let ansFah = convertToFahrenheit(temperature);
+            return ansFah+'F';
+
+         }else if(inDegree === 'F'){
+            let ansCel = convertToCelsius(temperature);
+            return ansCel+'C';
+
+         }else {
+
+            console.log('Wrong inDegree');
+         }
+      }
+
+
+   </script>
+</body>
+
+</html>

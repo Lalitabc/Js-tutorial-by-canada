@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Objects</title>
+</head>
+<body>
+   <script>
+      /*
+      const product ={
+         name: 'shocks',
+         price: 1900
+      };
+      console.log(product);
+      console.log(product.name);
+      console.log(product.price);
+
+      product.name  = 'cotton shocks';
+      console.log(product);
+
+      product.newproperty = true;
+      console.log(product);
+
+      delete product.newproperty;
+
+      console.log(product);
+
+      console.log(typeof product );
+      */
+
+      /*
+
+      const product2 = {
+         name:'shirt',
+         // ['delivery-time']:'1 day'
+         'delivery-time': '1 day',
+
+         rating : {
+            stars:4.5,
+            count :87
+
+         },
+
+         fun : function function1(){
+            console.log('Function inside function')
+         }
+
+      };
+
+      console.log(product2);
+      console.log(product2.name);
+      console.log(product2['name']);
+      console.log(product2['delivery-time']);
+      console.log(product2.rating.count);
+      product2.fun();
+
+      console.log(JSON.stringify(product2));
+
+      const jsonString = JSON.stringify(product2); // to convert js object to json
+
+      console.log(JSON.parse(jsonString)); // to convert json to java scrip object
+      console.log(typeof JSON.stringify(product2));
+
+      // local storage
+      // localStorage.setItem('message','hello');
+
+      // console.log(localStorage.getItem('message'));
+
+      */
+     //************************auto boxing*********************
+
+   //   console.log('Hello'.length);
+   //   console.log('Hello'.toUpperCase());
+
+   //  object reference
+
+   const object1 ={
+      message:'hello'
+   };
+
+   const object2=object1;
+   object1.message='Good Job!';
+   console.log(object1)
+   console.log(object2)
+
+   const object3 = {
+      message:'Good Job!'
+
+
+   };
+
+   console.log(object1 === object3);
+   console.log(object1 === object2);
+
+   const object4 = {
+      message:'Good Job!',
+      price:123
+
+   };
+
+
+   // const message = object1.message;
+   // sort cut
+   const {message , price} = object1;
+   console.log(message);
+   console.log(price);
+
+   const object5 = {
+      // message:message
+      // shortcut
+      message,
+
+      // method: function function1(){
+      //    console.log('Method')
+      // }
+      // shortcut
+      method () {
+         console.log('Nethod')
+      }
+   }
+   console.log(object5.message);
+   object5.method();
+   </script>
+</body>
+</html>
